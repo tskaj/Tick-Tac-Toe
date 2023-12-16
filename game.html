@@ -2,6 +2,7 @@
 <html>
     <head>
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <table>
@@ -9,7 +10,11 @@
         <tr>
             {% for j in range{3} %}
             <td>
-                This is a cell
+                {% if game[i][j]%}
+                    {{game[i][j]}}
+                {% else %}
+                <a href="{{ url_for('play', row=i, col=j)}}">play {{turn} here.}</a>
+                {% endif %} 
             </td>
             {% endfor %}
         </tr>
