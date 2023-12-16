@@ -15,4 +15,5 @@ def index():
         Session["board"]=[[None,None,None],[None,None,None],[None,None,None]]
         Session["turn"]="X"
         
+        return render_template("game.html", game= session["board"], turn= session["turn"])
 
