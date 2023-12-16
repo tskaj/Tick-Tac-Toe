@@ -15,7 +15,7 @@ def index():
     if "board" not in session:
         session["board"] = [[None, None, None], [None, None, None], [None, None, None]]
         session["turn"] = "X"
-    return render_template("game.html", game=session["board"], turn=session["turn"])
+    return render_template("index.html", game=session["board"], turn=session["turn"])
 
 @app.route("/play/<int:row>/<int:col>")
 def play(row, col):
@@ -34,3 +34,4 @@ def reset():
     return redirect(url_for("game.html"))
 
 #END OF THE GAME
+app.run(debug=True)
