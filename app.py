@@ -25,13 +25,13 @@ def play(row, col):
     # Added logic to handle the game moves
 
     # Redirect back to the game page after the move
-    return redirect(url_for("game.html"))
+    return redirect(url_for("index"))
 
 @app.route("/reset")
 def reset():
     # ResetS the game state or session data
     session.clear()
-    return redirect(url_for("game.html"))
+    return redirect(url_for("index"))
 
 #END OF THE GAME
 app.run(debug=True)

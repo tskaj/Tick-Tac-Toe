@@ -9,6 +9,10 @@ body {
     background-color: #f0f0f0; /* background color */
 }
 
+h1{
+    color: orange;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;

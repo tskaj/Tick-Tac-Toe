@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
 <body>
-    <h1> This is Index.html </h1>
-    <!-- <table>
+    <table>
         {% for i in range(3) %}
         <tr>
             {% for j in range(3) %}
             <td>
                 {% if game[i][j]%}
-                    game[i][j]
+                    {{game[i][j]}}
                 {% else %}
                 <a href="{{ url_for('play', row=i, col=j)}}">play {{turn}} here.</a>
                 {% endif %} 
@@ -20,6 +19,6 @@
             {% endfor %}
         </tr>
         {% endfor %}
-    </table> -->
+    </table>
 </body> 
 </html>
