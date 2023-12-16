@@ -39,3 +39,24 @@ td > a {
     height: 100%;
     line-height: 150px;
 }
+
+/* Reset button style */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin to separate from the table */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a1b9a; /* Darker shade on hover */
+}
