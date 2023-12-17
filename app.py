@@ -15,23 +15,14 @@ def index():
     if "board" not in session:
         session["board"] = [[None, None, None], [None, None, None], [None, None, None]]
         session["turn"] = "X"
+        session["turn"] = "O"
     return render_template("index.html", game=session["board"], turn=session["turn"])
 
 @app.route("/play/<int:row>/<int:col>")
 def play(row, col):
-    # UpdateD the session data or game state based on the row and column selected
-    
-    session["board"][row][col] = session["turn"]
-    # Added logic to handle the game moves
-
-    # Redirect back to the game page after the move
+    if session["board"][row][col] is None:
+        session["board"][row][col] = session["turn"]
+        session["turn"] = "O" if session["turn"] == "X" else "X"
     return redirect(url_for("index"))
 
-@app.route("/reset")
-def reset():
-    # ResetS the game state or session data
-    session.clear()
-    return redirect(url_for("index"))
-
-#END OF THE GAME
 app.run(debug=True)
