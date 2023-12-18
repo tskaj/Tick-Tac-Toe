@@ -1,6 +1,7 @@
 /* Centering the table */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -63,4 +64,13 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #6a1b9a; /* Darker shade on hover */
+}
+
+button{
+    background-color: white;
+    font-size: 20px;
+    color: purple;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
 }

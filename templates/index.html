@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
 <body>
+    {% if result %}
+        <h1>{{ result }}</h1>
+        <a href="{{ url_for('restart')}}"><button>Restart</button></a>
+    {% endif %}
     <table>
         {% for i in range(3) %}
         <tr>
